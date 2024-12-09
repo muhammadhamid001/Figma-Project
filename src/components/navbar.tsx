@@ -1,56 +1,36 @@
-import Link from "next/link";
-import { BsSearch } from "react-icons/bs";
+import Link from 'next/link'
+import { IoIosArrowDown } from 'react-icons/io'
 
 const Navbar = () => {
   return (
-    /* Logo  */
-    <div className="wrapper h-[87px] mt-[45px] border-[1px] border-white ">
-      <div className="flex justify-center ">
-        <div className="helvetica ">
-          <p className="font-bold text-[24px] text-white">
-            <span className="font-bold text-[24px] text-[#FF9F0D]">Food</span>
-            tuck
-          </p>
-        </div>
-      </div>
-      {/* Navbar  */}
-      <div className="flex justify-start items-center gap-[32px] text-white inter text-[16px] font-weight-[400]">
-        <Link className="mt-[20px] navbar__link relative" href={"#"}>
-          HOME
-        </Link>
-        <Link className="mt-[20px] navbar__link relative" href={"#"}>
-          Menu
-        </Link>
+    <div className="container flex justify-center w-[1320px] m-auto sm:mt-0 min-[400px]">
+{/* Navbar  */}
+<div className="flex justify-start items-center gap-[32px] text-white inter text-[16px] font-weight-[400]">
+         <Link className="mt-[20px] navbar__link relative" href={"#"}>
+           HOME
+         </Link>
+         <Link className="mt-[20px] navbar__link relative" href={"#"}>
+           Menu
+         </Link>
         <Link className="mt-[20px] navbar__link relative" href={"#"}>
           Blog
-        </Link>
+         </Link>
         <Link className="mt-[20px] navbar__link relative" href={"#"}>
           Pages
         </Link>
-        <Link className="mt-[20px] navbar__link relative" href={"#"}>
+         <Link className="mt-[20px] navbar__link relative" href={"#"}>
+        <IoIosArrowDown  className="absolute top-[20%] left-[50%] translate-x-6 "/>
           About
-        </Link>
-        <Link className="mt-[20px] navbar__link relative" href={"#"}>
+         </Link>
+         <Link className="mt-[20px] navbar__link relative" href={"#"}>
           Shop
-        </Link>
+         </Link>
         <Link className="mt-[20px] navbar__link relative" href={"#"}>
           Contact
-        </Link>
-        {/* search bar */}
-        <div className="flex relative px-[500px]">
-          <input
-            className="border border-[#FF9F0D] p-2 px-4 rounded-lg"
-            type="text"
-            placeholder="Search..."
-          />
-          <BsSearch
-            className="absolute left-[710px] mr-4 mt-3 text-gray-400 "
-            size={20}
-          />
-        </div>
+         </Link>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

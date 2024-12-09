@@ -1,22 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter,Great_Vibes } from "next/font/google";
 import localFont from "next/font/local";
 
 import "./globals.css";
-import Navbar from "@/components/navbar";
-
+import Logo_navbar from "@/components/logo_navbar";
+import Hero from "@/components/hero";
 
 const helvetica_init = localFont({
-  src: './fonts/Helvetica.ttf',
-  weight: '400',
-  variable: '--font-helvetica',
-
-})
+  src: "./fonts/Helvetica.ttf",
+  weight: "400",
+  variable: "--font-helvetica",
+});
 // Helvetica
 const inter_init = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-inter",
+});
+const greatVibes_init = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-greatVibes",
 });
 
 export const metadata: Metadata = {
@@ -31,9 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className="bg-black" lang="en">
-      <body className={`${inter_init.variable} ${helvetica_init.variable}` } >
-
-        <Navbar />
+      <body className={`${inter_init.variable} ${helvetica_init.variable} ${greatVibes_init.variable}`}>
+        <Logo_navbar />
+        <Hero />
         {children}
       </body>
     </html>

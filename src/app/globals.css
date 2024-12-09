@@ -20,7 +20,7 @@
   height: 7px;
   width: 7px;
   border-radius: 5px;
-  bottom: -5px;
+  top: 22px;
   left: 0;
   right: 0;
   margin: auto;
@@ -43,4 +43,7 @@
 .inter {
 
   font-family: var(--font-inter);
+}
+.greatVibes{
+  font-family: var(--font-greatVibes);
 }
